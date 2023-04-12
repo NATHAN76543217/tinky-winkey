@@ -3,9 +3,11 @@
 
 int main(int ac, char **av)
 {
+	Service srv;
+
 	    SERVICE_TABLE_ENTRY ServiceTable[] = 
     {
-        {SERVICE_NAME, (LPSERVICE_MAIN_FUNCTION) ServiceMain},
+        {SERVICE_NAME, (LPSERVICE_MAIN_FUNCTION) srv->ServiceMain},
         {NULL, NULL}
     };
  
@@ -14,6 +16,5 @@ int main(int ac, char **av)
         return GetLastError ();
     }
  
-    return 0;
     return 0;
 }
